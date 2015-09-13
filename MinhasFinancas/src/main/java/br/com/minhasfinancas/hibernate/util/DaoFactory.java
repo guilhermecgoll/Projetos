@@ -4,9 +4,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.com.minhasfinancas.hibernate.dao.CategoriaDAO;
+import br.com.minhasfinancas.hibernate.dao.CategoriaUsuarioDAO;
 import br.com.minhasfinancas.hibernate.dao.ContaDAO;
 import br.com.minhasfinancas.hibernate.dao.LancamentoDAO;
 import br.com.minhasfinancas.hibernate.dao.UsuarioDAO;
+import br.com.minhasfinancas.modelos.CategoriaUsuario;
 
 public final class DaoFactory {
 	
@@ -72,5 +74,17 @@ public final class DaoFactory {
 			lancamentoDaoInstance = new LancamentoDAO();
 		}
 		return lancamentoDaoInstance;
+	}
+	
+	/*
+	 * Instancia o CategoriaUsuarioDAO
+	 */
+	private static CategoriaUsuarioDAO categoriaUsuarioDaoInstance;
+	
+	public static CategoriaUsuarioDAO categoriaUsuarioInstance() {
+		if (categoriaUsuarioDaoInstance == null) {
+			categoriaUsuarioDaoInstance = new CategoriaUsuarioDAO();
+		}
+		return categoriaUsuarioDaoInstance;
 	}
 }
