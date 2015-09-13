@@ -34,4 +34,58 @@ public class CategoriaUsuario extends BaseBean{
 	
 	@ManyToOne
 	private Usuario usuario;
+	
+	public CategoriaUsuario() {	
+	}
+
+	public CategoriaUsuario(Long id, Calendar criadoEm, boolean habilitado, Categoria categoria, Usuario usuario) {
+		super();
+		this.id = id;
+		this.criadoEm = criadoEm;
+		this.habilitado = habilitado;
+		this.categoria = categoria;
+		this.usuario = usuario;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Calendar getCriadoEm() {
+		return criadoEm;
+	}
+
+	public void setCriadoEm(Calendar criadoEm) {
+		this.criadoEm = criadoEm;
+	}
+
+	public boolean isHabilitado() {
+		return habilitado;
+	}
+
+	public void setHabilitado(boolean habilitado) {
+		this.habilitado = habilitado;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	
 }
