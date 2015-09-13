@@ -2,6 +2,7 @@ package br.com.minhasfinancas.modelos;
 
 import java.util.Calendar;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -27,6 +28,7 @@ public class Usuario extends BaseBean{
 	private String password;
 	
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="ultimo_login")
 	private Calendar ultimoLogin;
 	
 	private boolean habilitado;

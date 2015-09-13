@@ -20,7 +20,7 @@
 		</layout>
 	</appender>
 
-	<logger name="br.com.minhasfinancas.modelos">
+	<logger name="br.com.minhasfinancas">
 		<level value="debug" />
 	</logger>
 
