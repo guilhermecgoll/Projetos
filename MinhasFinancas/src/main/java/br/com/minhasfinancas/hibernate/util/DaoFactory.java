@@ -3,12 +3,14 @@ package br.com.minhasfinancas.hibernate.util;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import br.com.minhasfinancas.hibernate.dao.UsuarioDAO;
+
 public final class DaoFactory {
 	
 	private DaoFactory() {		
 	}
 	
-	private static final String PERSISTENCE_UNIT_NAME = "wprojectPersistenceUnit";
+	private static final String PERSISTENCE_UNIT_NAME = "minhasFinancasPersistenceUnit";
 	
 	private static EntityManagerFactory entityManagerFactoryInstance;
 	
@@ -18,6 +20,19 @@ public final class DaoFactory {
 		}
 		
 		return entityManagerFactoryInstance;
+	}
+	
+	/*
+	 * Instancia o UsuarioDAO
+	 */
+	
+	private static UsuarioDAO usuarioDaoInstance;
+	
+	public static UsuarioDAO usuarioInstance() {
+		if (usuarioDaoInstance == null) {
+			usuarioDaoInstance = new UsuarioDAO();
+		}
+		return usuarioDaoInstance;
 	}
 	
 	

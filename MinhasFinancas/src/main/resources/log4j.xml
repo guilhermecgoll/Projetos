@@ -25,7 +25,7 @@
 	</logger>
 
 	<logger name="org.hibernate">
-		<level value="warn" />
+		<level value="info" />
 	</logger>
 
 	<logger name="org.jboss">
