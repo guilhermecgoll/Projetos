@@ -5,6 +5,7 @@ import javax.persistence.Persistence;
 
 import br.com.carhistory.hibernate.dao.CidadeDAO;
 import br.com.carhistory.hibernate.dao.EstadoDAO;
+import br.com.carhistory.hibernate.dao.EvidenciaDAO;
 import br.com.carhistory.hibernate.dao.PaisDAO;
 import br.com.carhistory.hibernate.dao.UsuarioDAO;
 import br.com.carhistory.hibernate.dao.VeiculoDAO;
@@ -79,5 +80,17 @@ public final class DaoFactory {
 			veiculoDaoInstance = new VeiculoDAO();
 		}
 		return veiculoDaoInstance;
+	}
+	
+	/**
+	 * Instancia o EvidenciaDAO
+	 */
+	private static EvidenciaDAO evidenciaDaoInstance;
+	
+	public static EvidenciaDAO evidenciaInstance(){
+		if (evidenciaDaoInstance == null) {
+			evidenciaDaoInstance = new EvidenciaDAO();
+		}
+		return evidenciaDaoInstance;
 	}
 }

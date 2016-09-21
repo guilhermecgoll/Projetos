@@ -11,7 +11,7 @@
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		//TODO chamar o método de autenticação
-		if ((username.equals("anurag") && password.equals("jain"))) {
+		if ((username.equals("admin") && password.equals("admin"))) {
 			session.setAttribute("username", username);
 			response.sendRedirect("Home.jsp");
 		} else
