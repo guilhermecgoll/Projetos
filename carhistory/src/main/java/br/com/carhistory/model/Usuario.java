@@ -33,14 +33,15 @@ public class Usuario extends BaseBean{
 	private Calendar ultimoLogin;
 	
 	private boolean habilitado;
-	
 	private Cidade cidadeUsuario;
+	private String cpfCnpj;
+	private String docIdentifier;
 	
 	public Usuario() {		
 	}	
 
 	public Usuario(Long id, String nome, String sobrenome, String username, String email, String password, Calendar ultimoLogin,
-			boolean habilitado, Cidade cidade) {
+			boolean habilitado, Cidade cidade, String cpfCnpj, String docIdentifier) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -51,6 +52,8 @@ public class Usuario extends BaseBean{
 		this.ultimoLogin = ultimoLogin;
 		this.habilitado = habilitado;
 		this.cidadeUsuario = cidade;
+		this.cpfCnpj = cpfCnpj;
+		this.docIdentifier = docIdentifier;
 	}
 
 	public Long getId() {
@@ -123,6 +126,22 @@ public class Usuario extends BaseBean{
 
 	public void setCidadeUsuario(Cidade cidadeUsuario) {
 		this.cidadeUsuario = cidadeUsuario;
+	}
+
+	public String getCpfCnpj() {
+		return cpfCnpj;
+	}
+
+	public void setCpfCnpj(String cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
+	}
+
+	public String getDocIdentifier() {
+		return docIdentifier;
+	}
+
+	public void setDocIdentifier(String docIdentifier) {
+		this.docIdentifier = docIdentifier;
 	}
 	
 }

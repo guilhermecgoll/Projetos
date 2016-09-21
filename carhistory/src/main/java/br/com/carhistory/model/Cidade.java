@@ -3,10 +3,12 @@ package br.com.carhistory.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import br.com.carhistory.hibernate.util.BaseBean;
 
 @Entity
+@Table (name="cidade")
 public class Cidade extends BaseBean{
 
 	private static final long serialVersionUID = 1360858791426671527L;

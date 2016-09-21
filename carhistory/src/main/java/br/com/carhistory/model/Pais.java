@@ -2,10 +2,12 @@ package br.com.carhistory.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import br.com.carhistory.hibernate.util.BaseBean;
 
 @Entity
+@Table (name="pais")
 public class Pais extends BaseBean{
 	
 	private static final long serialVersionUID = -2666193695449491093L;
