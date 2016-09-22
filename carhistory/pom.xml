@@ -34,7 +34,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.36</version>
+			<version>5.1.35</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -71,7 +71,9 @@
 	</dependencies>
 
 	<build>
-		<finalName>#{project.name}-${project.version}</finalName>
+		<!--  
+		finalName>${project.name}-${project.version}</finalName>
+		-->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>

@@ -29,4 +29,14 @@
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+		<display-name>NovoCadastro</display-name>
+        <servlet-name>NovoCadastro</servlet-name>
+        <servlet-class>br.com.carhistory.servlet.NovoCadastro</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NovoCadastro</servlet-name>
+        <url-pattern>/NovoCadastro</url-pattern>
+    </servlet-mapping>
 </web-app>
