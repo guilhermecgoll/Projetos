@@ -17,13 +17,14 @@ public class Evidencia extends BaseBean {
 	@GeneratedValue
 	private Long id;
 	private byte[] bytePicture;
+	
 	private TipoEvidencia tipoEvidencia;
 	
 	public Evidencia(){
 		
 	}
 	
-	public Evidencia(Long id, byte[] bytePicture, TipoEvidencia tipoEvidencia) {
+	public Evidencia(final Long id, final byte[] bytePicture, final TipoEvidencia tipoEvidencia) {
 		super();
 		this.id = id;
 		this.bytePicture = bytePicture;
@@ -34,7 +35,7 @@ public class Evidencia extends BaseBean {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(final Long id) {
 		this.id = id;
 	}
 
@@ -42,7 +43,7 @@ public class Evidencia extends BaseBean {
 		return bytePicture;
 	}
 
-	public void setBytePicture(byte[] bytePicture) {
+	public void setBytePicture(final byte[] bytePicture) {
 		this.bytePicture = bytePicture;
 	}
 
@@ -50,7 +51,7 @@ public class Evidencia extends BaseBean {
 		return tipoEvidencia;
 	}
 
-	public void setTipoEvidencia(TipoEvidencia tipoEvidencia) {
+	public void setTipoEvidencia(final TipoEvidencia tipoEvidencia) {
 		this.tipoEvidencia = tipoEvidencia;
 	}
 }

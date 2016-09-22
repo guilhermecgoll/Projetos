@@ -3,7 +3,10 @@ package br.com.carhistory.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import br.com.carhistory.hibernate.util.BaseBean;
 
@@ -18,6 +21,9 @@ public class Cidade extends BaseBean{
 	private Long id;
 	private String descricao;
 	
+	@ManyToOne
+	@NotNull
+	@JoinColumn(name="id_estado")
 	private Estado estado;
 	
 	public Cidade(){
@@ -28,7 +34,7 @@ public class Cidade extends BaseBean{
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(final Long id) {
 		this.id = id;
 	}
 
@@ -36,7 +42,7 @@ public class Cidade extends BaseBean{
 		return descricao;
 	}
 
-	public void setDescricao(String descricao) {
+	public void setDescricao(final String descricao) {
 		this.descricao = descricao;
 	}
 
@@ -44,7 +50,7 @@ public class Cidade extends BaseBean{
 		return estado;
 	}
 
-	public void setEstado(Estado estado) {
+	public void setEstado(final Estado estado) {
 		this.estado = estado;
 	}
 	

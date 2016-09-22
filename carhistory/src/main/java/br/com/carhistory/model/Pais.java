@@ -1,5 +1,6 @@
 package br.com.carhistory.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -13,6 +14,7 @@ public class Pais extends BaseBean{
 	private static final long serialVersionUID = -2666193695449491093L;
 	
 	@Id
+	@Column(name="id")
 	private Long bacenId;
 	private String descricao;
 	private String sigla;
@@ -20,7 +22,7 @@ public class Pais extends BaseBean{
 	public Pais() {
 	}
 	
-	public Pais(Long bacenId, String descricao, String sigla) {
+	public Pais(final Long bacenId, final String descricao, final String sigla) {
 		super();
 		this.bacenId = bacenId;
 		this.descricao = descricao;
@@ -29,19 +31,19 @@ public class Pais extends BaseBean{
 	public Long getBacenId() {
 		return bacenId;
 	}
-	public void setBacenId(Long bacenId) {
+	public void setBacenId(final Long bacenId) {
 		this.bacenId = bacenId;
 	}
 	public String getDescricao() {
 		return descricao;
 	}
-	public void setDescricao(String descricao) {
+	public void setDescricao(final String descricao) {
 		this.descricao = descricao;
 	}
 	public String getSigla() {
 		return sigla;
 	}
-	public void setSigla(String sigla) {
+	public void setSigla(final String sigla) {
 		this.sigla = sigla;
 	}
 	
