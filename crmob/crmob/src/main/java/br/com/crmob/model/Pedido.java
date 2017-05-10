@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -18,6 +19,7 @@ public class Pedido {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
+	@ManyToOne
 	private Agendamento agendamento;
 	private String observacoes;
 	private double valorTotal;

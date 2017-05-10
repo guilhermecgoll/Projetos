@@ -1,10 +1,19 @@
 package br.com.crmob.model;
 
 import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Embeddable
 public class ItemPedido {
 	
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	private long id;
+	
+	@ManyToOne
 	private Produto produto;
 	private double quantidade;
 	private double valorUnitario;
