@@ -1,1 +1,1 @@
-tudo puta
+Página destinada para projetos pessoais.
