@@ -3,36 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
-<meta charset=ISO-8859-1">
-<title>CrMob - Novo usuário</title>
-<c:url value="/resources/css" var="cssPath"></c:url>
-<link rel="stylesheet" href="${cssPath}/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
-<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	crossorigin="anonymous">
-<style type="text/css">
-body {
-	padding-top: 60px 0px;
-}
-</style>
-</head>
-<body>
-
-	<nav class="navbar navbar-inverse">
-	<div class="container">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="${s:mvcUrl('HC#index').build() }">Home</a>
-		</div>
-	</div>
-	</nav>
+<tags:pageTemplate titulo="Novo usuário">
 
 	<div class="container">
+	<h1>Cadastre-se</h1>
 		<!-- Com a taglib do Spring, é possível chamar o controle através das iniciais da classe mapeada.
 PC = ProdutosController # método "gravar" -->
 		<form:form action="${s:mvcUrl('UC#gravar').build() }" method="POST"
@@ -86,6 +62,4 @@ PC = ProdutosController # método "gravar" -->
 			<button type="submit" class="btn btn-primary">Cadastrar</button>
 		</form:form>
 	</div>
-
-</body>
-</html>
+</tags:pageTemplate>

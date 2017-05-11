@@ -3,7 +3,6 @@ package br.com.crmob.controllers;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -16,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import br.com.crmob.dao.PessoaDAO;
 import br.com.crmob.dao.UsuarioDAO;
 import br.com.crmob.model.Usuario;
+import br.com.crmob.util.SecurityUtil;
 import br.com.crmob.util.StringUtil;
 import br.com.crmob.validation.UsuarioValidation;
 
@@ -31,9 +31,6 @@ public class UsuarioController {
 	
 	@Autowired
 	private UsuarioValidation usuarioValidation;
-	
-	@Autowired
-	private BCryptPasswordEncoder encoder;
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
@@ -55,7 +52,7 @@ public class UsuarioController {
 		//Mantém apenas dígitos
 		usuario.getPessoa().setCpfCnpj(StringUtil.getOnlyNumbers(usuario.getPessoa().getCpfCnpj()));
 		usuario.getPessoa().setAtivo(true);
-		usuario.setPassword(encoder.encode(usuario.getPassword()));
+		usuario.setPassword(SecurityUtil.encode(usuario.getPassword()));
 		
 		pessoaDao.gravar(usuario.getPessoa());		
 		usuarioDao.gravar(usuario);
