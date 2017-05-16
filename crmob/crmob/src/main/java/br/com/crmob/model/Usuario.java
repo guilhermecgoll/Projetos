@@ -79,4 +79,8 @@ public class Usuario implements UserDetails {
 	public String getUsername() {
 		return this.username;
 	}
+	
+	public void addAuthority(Role role) {
+		this.roles.add(role);
+	}
 }

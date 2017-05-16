@@ -14,6 +14,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.crmob.dao.PessoaDAO;
 import br.com.crmob.dao.UsuarioDAO;
+import br.com.crmob.model.Role;
+import br.com.crmob.model.TipoRole;
 import br.com.crmob.model.Usuario;
 import br.com.crmob.util.SecurityUtil;
 import br.com.crmob.util.StringUtil;
@@ -53,6 +55,7 @@ public class UsuarioController {
 		usuario.getPessoa().setCpfCnpj(StringUtil.getOnlyNumbers(usuario.getPessoa().getCpfCnpj()));
 		usuario.getPessoa().setAtivo(true);
 		usuario.setPassword(SecurityUtil.encode(usuario.getPassword()));
+		usuario.addAuthority(new Role(TipoRole.EXTERNAL));
 		
 		pessoaDao.gravar(usuario.getPessoa());		
 		usuarioDao.gravar(usuario);

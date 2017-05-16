@@ -9,12 +9,8 @@
 <title>CrMob - ${titulo }</title>
 <c:url value="/" var="contextPath" />
 <c:url value="/resources/css" var="cssPath"></c:url>
-<link rel="stylesheet" href="${cssPath}/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
-<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	crossorigin="anonymous">
+<link rel="stylesheet" href="${cssPath}/bootstrap.min.css" >
+<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" >
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
