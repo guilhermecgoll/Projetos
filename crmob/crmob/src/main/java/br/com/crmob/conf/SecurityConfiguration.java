@@ -18,11 +18,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UsuarioService usuarioService;
 	
+	@Autowired
+	CustomAuthenticationSuccessHandler sucessHandler;
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 			.antMatchers("/pessoas/form").permitAll()
 			.antMatchers("/carrinho/**").permitAll()
+			.antMatchers("/configuracoes").hasRole("ADMIN")
 			.antMatchers(HttpMethod.GET, "/pessoas").permitAll()
 //			.hasRole("ADMIN")
 			.antMatchers(HttpMethod.POST, "/pessoas").permitAll()
@@ -32,7 +36,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/resources/**").permitAll()
 			.antMatchers("/").permitAll()
 //			.anyRequest().authenticated()
-			.and().formLogin().loginPage("/login").permitAll()
+			.and().formLogin().successHandler(sucessHandler).loginPage("/login").permitAll()
 			.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 	}
 	

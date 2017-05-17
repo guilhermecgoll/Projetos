@@ -20,5 +20,10 @@ public class InfoController {
 	public String paraEmpresa(){
 		return "info/para-empresas";
 	}
+	
+	@RequestMapping("/configuracoes")
+	public String configuracoes(){
+		return "config/configuracoes";
+	}
 
 }

@@ -13,6 +13,10 @@ public class Role implements GrantedAuthority{
 	@Id
 	private String nome;
 	
+	public Role(){
+		super();
+	}
+	
 	public Role (TipoRole tipoRole) {
 		this.nome = tipoRole.getDescricao();
 	}

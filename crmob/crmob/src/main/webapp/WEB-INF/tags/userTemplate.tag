@@ -11,8 +11,8 @@
 <c:url value="/resources/css" var="cssPath"></c:url>
 <link rel="stylesheet" href="${cssPath}/bootstrap.min.css" >
 <link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" >
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <style type="text/css">

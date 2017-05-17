@@ -57,7 +57,7 @@ public class UsuarioController {
 		usuario.setPassword(SecurityUtil.encode(usuario.getPassword()));
 		usuario.addAuthority(new Role(TipoRole.EXTERNAL));
 		
-		pessoaDao.gravar(usuario.getPessoa());		
+		pessoaDao.gravar(usuario.getPessoa());
 		usuarioDao.gravar(usuario);
 		
 		redAttributes.addFlashAttribute("resultado", "Usuário cadastrado com sucesso!");
