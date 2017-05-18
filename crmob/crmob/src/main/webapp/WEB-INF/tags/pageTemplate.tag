@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" >
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
 body {
@@ -23,10 +23,10 @@ body {
 </head>
 <body class="${bodyClass }">
 
-	<%@include file="/WEB-INF/views/cabecalho.jsp"%>
+	<%@include file="/WEB-INF/views/headers/cabecalho.jsp"%>
 
 	<jsp:doBody />
 
-	<%@include file="/WEB-INF/views/rodape.jsp"%>
+	<%@include file="/WEB-INF/views/footers/rodape.jsp"%>
 
 </body>

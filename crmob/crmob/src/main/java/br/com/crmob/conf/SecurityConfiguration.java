@@ -34,8 +34,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/pessoas/**").permitAll()
 			.antMatchers("/usuarios/**").permitAll()
 			.antMatchers("/resources/**").permitAll()
+			.antMatchers("/home/userHome").permitAll()//TODO mudar isso depois
 			.antMatchers("/").permitAll()
-//			.anyRequest().authenticated()
+			.anyRequest().authenticated()
 			.and().formLogin().successHandler(sucessHandler).loginPage("/login").permitAll()
 			.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 	}

@@ -9,8 +9,8 @@
 <title>CrMob - ${titulo }</title>
 <c:url value="/" var="contextPath" />
 <c:url value="/resources/css" var="cssPath"></c:url>
-<link rel="stylesheet" href="${cssPath}/bootstrap.min.css" >
-<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" >
+<link rel="stylesheet" href="${cssPath}/bootstrap.min.css">
+<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -23,10 +23,13 @@ body {
 </head>
 <body class="${bodyClass }">
 
-	<%@include file="/WEB-INF/views/cabecalho.jsp"%>
-
-	<jsp:doBody />
-
-	<%@include file="/WEB-INF/views/rodape.jsp"%>
+	<div class="container">
+		<%@include file="/WEB-INF/views/headers/cabecalho.jsp"%>
+		<div class="row">
+			<%@include file="/WEB-INF/views/headers/navegacao.jsp"%>
+			<jsp:doBody />
+			<%@include file="/WEB-INF/views/footers/rodape.jsp"%>
+		</div>
+	</div>
 
 </body>
