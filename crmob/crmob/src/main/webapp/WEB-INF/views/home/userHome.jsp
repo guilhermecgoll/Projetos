@@ -7,6 +7,6 @@
 	prefix="sec"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
-<tags:userTemplate titulo="Seu CRM móvel">
+<tags:userTemplate titulo="Seu CRM móvel" bodyClass="container-fluid">
 	<h1>Bem vindo ao CrMob</h1>
 </tags:userTemplate>
