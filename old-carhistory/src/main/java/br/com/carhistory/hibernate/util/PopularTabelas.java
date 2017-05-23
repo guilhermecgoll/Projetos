@@ -8,11 +8,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 
-import org.apache.log4j.Logger;
-
 public class PopularTabelas {
 	
-	private static final Logger LOGGER = Logger.getLogger(PopularTabelas.class);
+//	private static final Logger LOGGER = Logger.getLogger(PopularTabelas.class);
 	
 	private File[] loadScripts(){
 		File arquivos[] = null;
@@ -48,11 +46,11 @@ public class PopularTabelas {
 					try {
 						final Query q = manager.createNativeQuery(string.trim());
 						final int affectedRows = q.executeUpdate();
-						LOGGER.info(affectedRows + " - Linhas afetadas");
+//						LOGGER.info(affectedRows + " - Linhas afetadas");
 						manager.getTransaction().commit();
 					} catch (final Exception e) {
 						manager.getTransaction().rollback();
-						LOGGER.error("Erro ao executar o Script ["+string.trim()+"]", e);
+//						LOGGER.error("Erro ao executar o Script ["+string.trim()+"]", e);
 					}
 				}
 			}
