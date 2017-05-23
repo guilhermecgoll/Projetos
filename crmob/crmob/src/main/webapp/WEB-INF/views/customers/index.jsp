@@ -7,11 +7,10 @@
 	prefix="sec"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
-<tags:pageTemplate titulo="Seu CRM móvel" bodyClass="container-fluid">
-	<section>
-		<h1>Descrição do site...</h1>
-	</section>
-	<section>
-		<p>outro texto</p>
-	</section>
-</tags:pageTemplate>
+<tags:userTemplate title="Seu CRM móvel" bodyClass="container-fluid">
+	<div class="tab-content">
+		<div class="tab-pane active" id="customers" role="tabpanel">
+			<h1>You are in customers index</h1>
+		</div>
+	</div>
+</tags:userTemplate>

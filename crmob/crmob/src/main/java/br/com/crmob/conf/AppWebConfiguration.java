@@ -35,7 +35,7 @@ import br.com.crmob.model.Pessoa;
 import br.com.crmob.validation.UsuarioValidation;
 
 @EnableWebMvc
-@ComponentScan(basePackageClasses = { PessoaDAO.class, Pessoa.class, LoginController.class, UsuarioValidation.class })
+@ComponentScan(basePackageClasses = { PessoaDAO.class, Pessoa.class, LoginController.class, UsuarioValidation.class, CustomAuthenticationSuccessHandler.class })
 // @ComponentScan(basePackages={"br.com.casadocodigo.loja.controllers"})
 @EnableCaching
 public class AppWebConfiguration extends WebMvcConfigurerAdapter {

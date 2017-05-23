@@ -23,10 +23,10 @@ body {
 </head>
 <body class="${bodyClass }">
 
-	<%@include file="/WEB-INF/views/headers/cabecalho.jsp"%>
+	<%@include file="/WEB-INF/views/cabecalho.jsp"%>
 
 	<jsp:doBody />
 
-	<%@include file="/WEB-INF/views/footers/rodape.jsp"%>
+	<%@include file="/WEB-INF/views/rodape.jsp"%>
 
 </body>
